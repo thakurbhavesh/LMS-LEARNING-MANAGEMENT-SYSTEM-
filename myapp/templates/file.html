@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>videos and files</title>
+      <style>
+
+          .bg{
+          background:#ff4081;important;
+          }
+          .list-group-item.active{
+          background:#ff4081;important;
+          border-color:#ff4081;important;
+          }
+          tr{
+          border:2px solid;}
+H1{
+text-align:center;
+color:magenta;
+}
+hr{border:5px solid;}
+      </style>
+  </head>
+  <body>
+
+
+<H1><button>Video & Files</button> </H1>
+
+<hr>
+<div class="container-fluid">
+
+
+    </div>
+<fieldset style="border:2px dashed">
+    <div class="col-md-10">
+
+<!--      Images-->
+
+      <div class="row mt-3" >
+        <div class="col-md-12">
+
+          <div class="card-columns">
+
+
+            {% for x in vids %}
+
+<h3 class="card-text">{{x.caption}}</h3>
+
+            <div class="card">
+ <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="{{x.video.url}}" allowfullscreen></iframe>
+</div>
+  <div class="card-body">
+<table >
+
+
+    <a href="#" class="btn btn-primary" onclick="showModalwithImage('{{x.video}}')">View</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+            {% endfor %}
+
+
+
+          </div>
+
+
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+</fieldset>
+
+
+<!-- Modal -->
+<div class="modal " id="image-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button><h5 class="modal-title" id="exampleModalLabel">Course</h5></button>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="#!" id="image-show" class="img-fluid" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script>
+    function showModalwithImage(imageUrl)
+    {
+     $('#image-modal').modal('show')
+     $("#image-show").attr('src',`/media/${imageUrl}`)
+    }
+  </script>
+
+
+
+
+  </body>
+</html>

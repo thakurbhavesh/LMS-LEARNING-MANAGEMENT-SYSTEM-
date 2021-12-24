@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+    color:rebeccapurple;
+}
+a:hover{
+    font-size: 30px;
+    color:purple;
+    animation:jello;
+    
+}
+.nav-item{
+    font-size: 25px;
+    color:rgb(255, 255, 255);
+}
+ .navbar-brand{
+      font-family: "Ubuntu",sans-serif;
+      font-size: 2em;
+      font-weight: bold;
+      color: #fff;
+      animation: wobble  ; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 6s;
+    }

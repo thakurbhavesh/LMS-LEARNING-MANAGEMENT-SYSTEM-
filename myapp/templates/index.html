@@ -1,0 +1,36 @@
+ {% extends 'base.html' %}
+{% block title %}home{% endblock title %}
+ {% block body %}
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+ <style>
+
+table{
+text-align:center;
+background-color:white;
+opacity:0.8;
+}
+body{
+background-image: url("https://source.unsplash.com/1600x900/?computer");
+background-color:aqua;
+}
+#welcome{
+padding-left:50px;
+width:50%!important;
+font-size:25px;
+animation:jello;
+}
+
+ </style>
+  {% load static %}
+<div class="container">
+ <br><br><br><br><br>
+ <center><br><br><br><br><br><br>
+
+ <span class="btn btn-primary animate__heartBeat" id="welcome">W&nbsp; E&nbsp; L&nbsp; C &nbsp;O &nbsp;M &nbsp;E &nbsp;&nbsp;&nbsp;T&nbsp; O &nbsp;&nbsp;&nbsp; M &nbsp;Y &nbsp;&nbsp;&nbsp; L M S</span></CENTER>
+
+</div>
+
+ {% endblock body %}

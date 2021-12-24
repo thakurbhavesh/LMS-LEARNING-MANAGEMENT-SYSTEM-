@@ -1,0 +1,292 @@
+{% extends "base.html" %}
+{% block body %}
+ <!DOCTYPE html>
+<html>
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <title> About Page</title>
+    <link href="/static/css/style.css" rel="stylesheet"/>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Gorditas&display=swap" rel="stylesheet">
+	 <style>
+
+	     body{  background-color:lightgreen!important;
+
+
+	     }
+
+
+          .bg{
+          background:#ff4081;important;
+
+
+          }
+          .list-group-item.active{
+
+          background:lime;important;
+          border-color:red!important;
+          }
+
+          p{
+          color:gold;
+
+         }
+          p:hover{
+          color:silver;
+
+         }
+          h1:hover{
+          color:magenta;
+
+         }
+         img{
+
+   border:4px solid black;
+   box-shadow:4px 2px 4px red;
+         }
+        
+          a{
+
+  padding-left:20px;
+         }
+         a:hover{
+         color:lime;
+         background-color:orange;
+
+         }
+         .list-group{
+         color:red;
+         background-color:magenta;}
+         button{
+          color:red;
+         background-color:cyan!important;
+
+         }
+             button{
+          color:white!important;
+         background-color:lime!important;
+
+         margin-left:90%;
+
+list-style-type:none;
+text-decoration:none;
+         }
+          #two{
+          color:green;
+         background-color:orange!important;
+
+  border:4px solid silver;
+  text-shadow:2px 4px 4px maroon;
+         }
+          #two:hover{
+          color:gray;
+         background-color:lime!important;
+
+  border:4px solid black;
+  text-align:center;
+  text-shadow:2px 4px 2px yellow;
+         }
+          #one{
+          color:lime;
+         background-color:white!important;
+
+  text-shadow:2px 4px 2px yellow;
+         }
+          button:hover{
+          color:red!important;
+         background-color:silver!impoertant;
+
+         }
+         img:hover{
+         box-shadow:2px 2px 4px red;
+
+         border:4px solid black}
+        .carousel-item{
+          height:400x;
+        }
+        .nav-link{
+          color:red!important;
+        }
+         .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+}
+      }
+          .jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron h1 {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+ hr{
+ border:5px dashed red;
+ .img-fluid:hover{
+  border-radius:50%;
+  }
+  b{
+  color:red!important;
+  font-family: 'Gorditas', cursive;}
+  body{
+  background-color:silver!important;
+
+  }
+   fieldset{
+  background-color:white;
+  color:red!important;
+  }
+label{
+color:green;
+}
+  }
+label:hover{
+color:silver;
+}
+
+ </style>
+     <script>
+    // Function to change webpage background color
+    function changeBodyBg(color){
+        document.body.style.background = color;
+    }
+
+    // Function to change heading background color
+    function changeHeadingBg(color){
+        document.getElementById("heading").style.background = color;
+    }
+</script>
+</head>
+<body >
+
+ 
+
+<div class="container-fluid px-0 my-2">
+  
+
+  
+
+<section>
+	<div class="container">
+<h1 id="heading">DEVELOPER INTRODUCTION</h1>
+
+		<div class="row">
+         <fieldset style="border:2px solid;"><br>
+			<div class="col-lg-12 col-md-2 col-12 mb-4">
+				<center><img src="/static/images/amit.jpg" class="img-fluid" height="450px" width="450px"></center><br>
+             <div class="col-lg-12 col-md-6 col-12">
+			<h1>AMIT KUMAR 2<sup>nd</sup></h1>
+              <label>BRANCH :<p style="font-size:20px">COMPUTER SCIENCE AND ENGINEERING</p></label><br>
+              <label>YEAR :<p style="font-size:20px">FINAL YEAR</p></label>
+			<hr>
+			<b>HTML, CSS, and Javascript are the languages used for Front End development. The structure, design, behavior, and content of everything seen on browser screen when websites, web applications, or mobile apps are opened up, is implemented by front End developers.</b>
+</fieldset>
+
+
+           <fieldset style="border:2px solid;"><br>
+			<div class="col-lg-12 col-md-2 col-12 mb-4">
+				<center><img src="/static/images/z.jpg" class="img-fluid" height="450px" width="450px"></center><br>
+             <div class="col-lg-12 col-md-6 col-12">
+			<h1>SATYANSHU PATHAK</h1>
+              <label>BRANCH :<p style="font-size:20px">COMPUTER SCIENCE AND ENGINEERING</p></label><br>
+              <label>YEAR :<p style="font-size:20px">FINAL YEAR</p></label>
+			<hr>
+			<b> Designing,Coding(Front End)<BR>
+            HTML, CSS, and Javascript are the languages used for Front End development. The structure, design, behavior, and content of everything seen on browser screen when
+
+                websites, web applications, or mobile apps are opened up, is implemented by front End developers.</b>
+</fieldset>
+
+           <fieldset style="border:2px solid;"><br>
+			<div class="col-lg-12 col-md-2 col-12 mb-4">
+				<center><img src="/static/images/bhavesh.png" class="img-fluid" height="450px" width="450px"></center><br>
+             <div class="col-lg-12 col-md-6 col-12">
+			<h1>BHAVESH SINGH</h1>
+              <label>BRANCH :<p style="font-size:20px">COMPUTER SCIENCE AND ENGINEERING</p></label><br>
+              <label>YEAR :<p style="font-size:20px">FINAL YEAR</p></label>
+			<hr>
+			<b> Designing,Coding(Back End.)<br>
+            Django is an open-source framework for backend web applications based on Python — one of the top web development languages. Its main goals are simplicity, flexibility, reliability, and scalability. </b>
+</fieldset>
+
+           <fieldset style="border:2px solid;"><br>
+			<div class="col-lg-12 col-md-2 col-12 mb-4">
+				<center><img src="/static/images/navneet.jpg" class="img-fluid" height="450px" width="450px"></center><br>
+             <div class="col-lg-12 col-md-6 col-12">
+			<h1>NAVNEET RANJAN</h1>
+              <label>BRANCH :<p style="font-size:20px">INFORMATION TECHNOLOGY</p></label><br>
+              <label>YEAR :<p style="font-size:20px">FINAL YEAR</p></label>
+			<hr>
+			<b> Designing,Coding(Front End).<BR>
+            HTML, CSS, and Javascript are the languages used for Front End development. The structure, design, behavior, and content of everything seen on browser screen when websites,
+                web applications, or mobile apps are opened up, is implemented by front End developers.</b>
+</fieldset>
+
+           <fieldset style="border:2px solid;"><br>
+			<div class="col-lg-12 col-md-2 col-12 mb-4">
+				<center><img src="/static/images/irfan.jpg" class="img-fluid" height="200px" width="450px"></center><br>
+             <div class="col-lg-12 col-md-6 col-12">
+			<h1>Mohd. IRFAN</h1>
+              <label>BRANCH :<p style="font-size:20px">COMPUTER SCIENCE AND ENGINEERING</p></label><br>
+              <label>YEAR :<p style="font-size:20px">FINAL YEAR</p></label>
+			<hr>
+			<b>Designing,Coding(Back End.)<br>
+            Django is an open-source framework for backend web applications based on Python — one of the top web development languages. Its main goals are simplicity, flexibility, reliability, and scalability. </b>
+</fieldset>
+		</div>
+			</div><br>
+
+
+		</div>
+    </div>
+</section>
+
+ 
+</div>
+</body>
+</html>
+{% endblock body %}

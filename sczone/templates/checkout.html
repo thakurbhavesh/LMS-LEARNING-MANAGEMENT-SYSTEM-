@@ -1,0 +1,247 @@
+{% extends "custhome.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+background-image: url("https://source.unsplash.com/collection/190727/1600x900");}}
+
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  color:magenta;
+}
+h2{
+color:red;
+text-align:center;
+}
+h2:hover{
+color:magenta;
+}
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+
+  color:lime;
+  background-color:cyan;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+body{
+background-color:orange;
+
+}
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: cyan; /* Fallback color */
+  background-color: cyan; /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-image: url("https://source.unsplash.com/collection/190727/1600x900");}}
+
+  background-color: magenta!important;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+sup{
+color:red;
+font-size:20px;
+}
+</style>
+</head>
+<body>
+
+{% if msg %}
+<p style="color:red;font-size:25px;"><mark>{{msg}}</mark></p>
+{% endif %}
+<br>
+<center><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">BUY NOW</button></center>
+
+<div id="id01" class="modal">
+
+  <form class="modal-content animate"  method="post">
+    {% csrf_token %}
+<      h5>&nbsp;&nbsp; &nbsp;&nbsp;Fill up your details for registration in L M S courses.</h5>
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="/static/images/avatar2.png" alt="Avatar" class="avatar">
+        <input type="file" name="profile">
+    </div>
+
+    <div class="container">
+        <label for="uname"><b>Sr.no</b><sup>*</sup></label>
+      <input type="text"  name="srno" required disabled>
+
+      <label for="uname"><b>Date</b><sup>*</sup></label>
+      <input type="date" name="date" required style="width:100%!important;height:20px!important;"><br><br>
+
+      <label for="psw"><b>Select Your Gender</b></label><br><br>
+      <input type="radio"  name="gender"  value="male" required>Male
+        <input type="radio"  name="gender"  value="female" required>Female<br><br>
+
+        <div class="form-group">
+	<label for="psw"><b>Fees Mode</b><sup>*</sup></label><br><br>
+		<select id="feesmode"  name="feesmode"  style="width:100%!important;height:20px!important;" required>
+			<option value="Registration">Registration Only</option>
+			<option value="RegPlusFees">Registration + Fees</option>
+			<option value="Pay Fees">Pay Fees</option>
+
+		</select>
+<br><br>
+         <label for="uage"><b>Application For</b><sup>*</sup></label><br><br>
+<div class="form-group">
+
+		<select id="training"  name="training" style="width:100%!important;height:20px!important;" required>
+		<option value="">-Select Training Name-</option>
+			<option value="Free Courses">Free Courses</option>
+			<option value="Paid Courses">Paid Courses</option>
+		<option value="Summer Training (B.Tech, MCA, BCA)">Summer Training (B.Tech, MCA, BCA)</option>
+		<option value="Summer Training (Diploma, PGDCA)">Summer Training (Diploma, PGDCA)</option>
+		<option value="Industrial Training">Industrial Training</option>
+		<option value="Winter Training">Winter Training</option>
+		<option value="Apprenticeship">Apprenticeship</option>
+
+
+		</select><br><br>
+    <label for="upass"><b>Course Name</b><sup>*</sup></label>`
+                <input type="text" class="form-control" value="" placeholder="course name" name="coursename" style="width:100%!important;height:20px!important;" required />
+                <br><br>
+         <label for="ucon"><b>Student Name</b><sup>*</sup></label>
+      <input type="text" placeholder="student name" name="sname" required>
+<br><br>
+         <label for="uemail"><b>College Name</b><sup>*</sup></label><br><br>
+      <input type="text" placeholder="Enter Your College Name " name="cname" required style="width:100%!important;height:20px!important;">
+<br><br>
+    <label for="ucon"><b>Contact Number</b><sup>*</sup></label>
+      <input type="text" placeholder="Contact Number" name="mobile" required><br><br>
+
+    <label for="upass"><b>Email Address</b><sup>*</sup></label>`<br>
+                <input type="email" class="form-control" value="" placeholder="Enter Your Email" name="email" style="width:100%!important;height:20px!important;" required />
+                <br><br>
+                <label for="upass"><b>Amount in INR</b><sup>*</sup></label>`
+
+    <input type="text" class="form-control" maxlength="5" placeholder="Enter Your Amount"  id="amount" name="amount" value="" readonly/>
+     <br>
+    <input type="checkbox"> I hereby declare that the particulars provided in the form are correct and I duly agree to the Privacy Policy of the company.
+      <button type="submit"> Proceed To Pay</button>
+
+    </div>
+
+
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
+{% endblock body %}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+{% load static %}
+<head>
+
+    <meta charset="UTF-8">
+    <title> {% block title %}
+    {% endblock title %}</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+	 <style>
+
+	     body{  background-color:white;
+
+	     background-image: url("https://source.unsplash.com/1600x900/?matrix");
+	     font-family: 'Fredericka the Great', cursive;
+	     color:black!important;
+	     }
+
+
+          .bg{
+          background:#ff4081;important;
+
+          }
+          .list-group-item.active{
+background-image: url("https://source.unsplash.com/1600x900/?matrix");
+          background:lime;important;
+          border-color:red!important;
+          color:red!important;
+          }
+
+          p{
+          color:gold;
+
+         }
+          p:hover{
+          color:silver;
+
+         }
+          h1:hover{
+          color:magenta;
+
+         }
+         img{
+
+   border:4px solid black;
+         }
+
+          a{
+
+  padding-left:20px;
+         }
+         a:hover{
+         color:lime!important;
+         background-color:red;
+
+         }
+         .list-group{
+          color:white!important;
+         background-color:magenta;}
+         button{
+          color:white!important;
+         background-color:orange!important;
+         width:30%!important;
+         margin-left:0px auto%;
+
+         }
+          #two{
+          color:green;
+         background-color:orange!important;
+
+  border:4px solid silver;
+  text-shadow:2px 4px 4px maroon;
+         }
+          #two:hover{
+          color:gray;
+         background-color:lime!important;
+
+  border:4px solid black;
+  text-align:center;
+  text-shadow:2px 4px 2px yellow;
+         }
+          #one{
+          color:lime;
+         background-color:white!important;
+
+  text-shadow:2px 4px 2px yellow;
+         }
+          button:hover{
+          color:red!important;
+         background-color:silver!impoertant;
+
+         }
+         img:hover{
+         box-shadow:2px 2px 4px red;
+
+         border:4px solid black}
+        .carousel-item{
+          height:400x;
+        }
+        .nav-link{
+          color:purple;
+        }
+         .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+}
+      }
+          .jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron h1 {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+      </style>
+    <script>
+    // Function to change webpage background color
+    function changeBodyBg(color){
+        document.body.style.background = color;
+    }
+
+    // Function to change heading background color
+    function changeHeadingBg(color){
+        document.getElementById("heading").style.background = color;
+    }
+</script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" my-2>
+
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" onclick="changeBodyBg('black');" href="#">Profile </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'sczone:complain' %}" onclick="changeBodyBg('black');">Complain</a>
+      </li>
+	  <li class="nav-item">
+       <a class="nav-link" href="{% url 'sczone:feedback' %}">Feedback</a>
+      </li>
+       <li class="nav-item">
+       <a class="nav-link" href="{% url 'sczone:course' %}">Course</a>
+      </li>
+        <li class="nav-item">
+       <a class="nav-link" href="{% url 'sczone:notification' %}" >Notice</a>
+      </li>
+
+        <li class="nav-item">
+       <a class="nav-link" href="{% url 'sczone:contact' %}">Contact</a>
+      </li>
+   <li class="nav-item">
+       <a class="nav-link" href="{% url 'sczone:checkout' %}">Checkout(Buy Course)</a>
+      </li>
+
+	  <li class="nav-item">
+        <a class="nav-link" href="{% url 'sczone:changepassword' %}">Change Password</a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'sczone:logout' %}">Logout</a></li>
+
+
+    </ul>
+
+  </div>
+</nav>
+ {% load static %}
+
+<br>
+<div class="container-fluid px-0 my-2">
+  {% block body %}
+
+  {% endblock body%}
+</div>
+</body>
+</html>
